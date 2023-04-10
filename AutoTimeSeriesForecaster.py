@@ -22,7 +22,13 @@ class AutoTS:
     
     """
     
-    An automated time series class using the sk-time library.
+    An automated time series class using the sktime library.
+    
+    References to sktime:
+    https://www.sktime.net/en/latest/index.html
+    http://learningsys.org/neurips19/assets/papers/sktime_ml_systems_neurips2019.pdf
+    https://zenodo.org/record/7117735#.ZDQjzezMI-Q
+   
 
     This class takes in a time series of varying frequency, evaluates a suite of models
     and returns the best performing model.
@@ -121,7 +127,7 @@ class AutoTS:
         
         '''
         
-        Carries out time series cross validates on dataset.
+        Carries out time series cross validates on input dataset.
         
         Args:
         

@@ -6,6 +6,7 @@ from sktime.forecasting.ets import AutoETS
 from sktime.forecasting.statsforecast import StatsForecastAutoARIMA
 from sktime.forecasting.fbprophet import Prophet
 from sktime.forecasting.trend import STLForecaster
+from sktime.forecasting.trend import TrendForecaster
 from sktime.forecasting.model_selection import (
    ForecastingGridSearchCV,
    ExpandingWindowSplitter)
@@ -21,13 +22,7 @@ class AutoTS:
     
     """
     
-    An automated time series class using the sktime library.
-    
-    References to sktime:
-    https://www.sktime.net/en/latest/index.html
-    http://learningsys.org/neurips19/assets/papers/sktime_ml_systems_neurips2019.pdf
-    https://zenodo.org/record/7117735#.ZDQjzezMI-Q
-   
+    An automated time series class using the sk-time library.
 
     This class takes in a time series of varying frequency, evaluates a suite of models
     and returns the best performing model.
@@ -91,7 +86,6 @@ class AutoTS:
             
             '''
             
-            self.use_holidays = True 
             
             # Create a dict-like object for England's public holidays
             uk_holidays = holidays.UK(state = 'England', years=range(dates.min().year, 
@@ -126,7 +120,7 @@ class AutoTS:
         
         '''
         
-        Carries out time series cross validates on input dataset.
+        Carries out time series cross validates on dataset.
         
         Args:
         

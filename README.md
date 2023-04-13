@@ -3,7 +3,7 @@
 A python library that can automate a number of time series forecasting processes, including:
 
 - Conducting time series cross validation 
-- Producing evaluation metrics (MAPE, MAE, MAE) as outputs from cross validation
+- Producing evaluation metrics (MAPE, MAE, MSE) as outputs from cross validation
 - Automatically selects model based on minimising chosen performance metric
 - Once cross validation is called, you can then create forecasts from chosen model (or by specifying other model).
 

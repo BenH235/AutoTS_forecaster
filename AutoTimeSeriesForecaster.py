@@ -6,11 +6,6 @@ from sktime.forecasting.ets import AutoETS
 from sktime.forecasting.statsforecast import StatsForecastAutoARIMA
 from sktime.forecasting.fbprophet import Prophet
 from sktime.forecasting.trend import STLForecaster
-from sktime.forecasting.trend import TrendForecaster
-from sktime.forecasting.model_selection import (
-   ForecastingGridSearchCV,
-   ExpandingWindowSplitter)
-from sktime.forecasting.model_selection import temporal_train_test_split
 from sktime.forecasting.model_selection import ExpandingWindowSplitter
 import numpy as np
 import pandas as pd

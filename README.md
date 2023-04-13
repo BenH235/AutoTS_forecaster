@@ -1,10 +1,9 @@
 # AutoTS_forecaster
 
-Python library that can automate time series forecasting processes. 
+A python library that can automate a number of time series forecasting processes, including:
 
-The library can automate a number of steps in the forecasting process, such as:
 - Conducting time series cross validation
 - Producing evaluation metrics
-- Automatic model selection. 
+- Automatic model selection
 
-It also includes the ability to include holidays (for daily data) and exogenous variables. If using exogenous variables, it is able to forecast them seperately if the values are not known in the future.
+It also includes the ability to include the impact of public holidays (currently only for daily data) and exogenous variables. If using exogenous variables, it is able to forecast them seperately if the values are not known during the forecasted period.

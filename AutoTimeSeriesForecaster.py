@@ -17,7 +17,11 @@ class AutoTS:
     
     """
     
-    An automated time series class using the sk-time library.
+    An automated time series class using the sktime library.
+    
+    sktime references:
+    http://learningsys.org/neurips19/assets/papers/sktime_ml_systems_neurips2019.pdf
+    http://doi.org/10.5281/zenodo.3749000
 
     This class takes in a time series of varying frequency, evaluates a suite of models
     and returns the best performing model.

@@ -119,7 +119,7 @@ class AutoTS:
         
         '''
         
-        Carries out time series cross validates on dataset.
+        Carries out time series cross validation on dataset.
         
         Args:
         
@@ -187,13 +187,13 @@ class AutoTS:
         model_cv_results= {}
         for m in models_dict:
 
-            # Store testing/prediciton results from cross validation.
+            # Store testing/prediction results from cross validation.
             y_test_list = []
             y_pred_list = []
             
             for idx, x in enumerate(list(cv.split(input_df))):
                 
-                # Pandas series (x[0] refers to training from cross valiadtion. split).
+                # Pandas series (x[0] refers to training from cross validation split).
                 y_train = y.iloc[x[0]]
                 
                 # Checking if using regressors, if not, X_train = None.
@@ -244,7 +244,7 @@ class AutoTS:
             model.fit(y = y, X = X)
             self.X_train = X
             
-            # Output corss validation dataframe.
+            # Output cross validation dataframe.
             df_out = pd.concat(y_test_list).to_frame(name = 'y_test')
             df_out['y_pred'] = np.concatenate(y_pred_list)
             df_out['model'] = m
@@ -316,7 +316,7 @@ class AutoTS:
         if type(exog_to_forecast) == str:
             self.exog_to_forecast = [self.exog_to_forecast]
 
-        # Defining certain warning messages.
+        # Defining warning messages.
         if self.exog is not None:
             if (self.exog_df is None) and (self.exog_to_forecast is None):
                 print('Warning: Expected exogenous values as an argument, but got none!')
